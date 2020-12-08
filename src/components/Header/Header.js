@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import "./Header.scss";
 const Header = () => {
   return (
-    <div className="header-content">
-      <div className="header-title-text">Mis vídeos favoritos</div>
-      <input type="button" value="Añadir Video" className="header-button-add" />
-    </div>
+    <header className="header">
+      <h1 className="header__title">Mis vídeos favoritos</h1>
+      <input type="button" value="Añadir Video" className="header__button" />
+    </header>
   );
 };
 Header.propTypes = {};

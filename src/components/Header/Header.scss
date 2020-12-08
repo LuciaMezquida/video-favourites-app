@@ -1,0 +1,24 @@
+@import "../../styleSheets/variables.scss";
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  &__title {
+    font-family: $font-main;
+    margin-top: 10px;
+    font-size: 3rem;
+    color: $color-secondary;
+  }
+  &__button {
+    font-family: $font-main;
+    width: 200px;
+    height: 30px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: $color-secondary;
+    border-radius: 20px;
+    margin: 10px 0;
+  }
+}
