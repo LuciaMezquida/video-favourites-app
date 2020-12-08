@@ -5,8 +5,9 @@ class Loading extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {}
   render() {
-    return <div className="loading">{this.props.message}</div>;
+    return <div className="loading">{this.props.message || "Loading..."}</div>;
   }
 }
 Loading.propTypes = {

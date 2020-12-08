@@ -4,6 +4,9 @@ import Loading from "../Loading/Loading";
 class List extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isLoading: false,
+    };
   }
   render() {
     return <Loading message="Loading..." />;
