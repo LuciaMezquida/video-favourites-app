@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Header from "../Header/Header";
 import Item from "../Item/Item";
+import Footer from "../Footer/Footer";
 class List extends React.Component {
   constructor(props) {
     super(props);
@@ -55,6 +56,7 @@ class List extends React.Component {
               })}
           </div>
         </div>
+        <Footer />
       </>
     );
   }
