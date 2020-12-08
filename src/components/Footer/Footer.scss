@@ -1,0 +1,14 @@
+@import "../../styleSheets/variables.scss";
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  height: 4vh;
+  &__text {
+    color: $color-secondary;
+    font-family: $font-main;
+    font-weight: 700;
+  }
+}

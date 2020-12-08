@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
