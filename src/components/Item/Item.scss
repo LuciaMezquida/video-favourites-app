@@ -1,0 +1,12 @@
+@import "../../styleSheets/variables.scss";
+.main {
+  &__item {
+    width: 400px;
+    &--image {
+      width: 400px;
+    }
+    &--title {
+      font-family: $font-main;
+    }
+  }
+}

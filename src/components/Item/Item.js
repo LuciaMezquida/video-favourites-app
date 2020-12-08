@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./Item.scss";
 
 const Item = ({ data }) => {
   return (
-    <div className="grid-item">
-      <img className="preview-image" src={data.thumbnail} alt={data.title} />
-      <div className="preview-title">{data.title}</div>
-    </div>
+    <article className="main__item">
+      <img
+        className="main__item--image"
+        src={data.thumbnail}
+        alt={data.title}
+      />
+      <p className="main__item--title">{data.title}</p>
+    </article>
   );
 };
 Item.propTypes = {

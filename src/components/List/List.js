@@ -48,14 +48,14 @@ class List extends React.Component {
     return (
       <>
         <Header onClickAdd={this.handleAdd} />
-        <div className="container">
-          <div className="grid-container">
+        <main className="main">
+          <div className="main__container">
             {videos && //si videos es true, se hace el map
               videos.map((video, i) => {
                 return <Item key={i} data={video} />;
               })}
           </div>
-        </div>
+        </main>
         <Footer />
       </>
     );

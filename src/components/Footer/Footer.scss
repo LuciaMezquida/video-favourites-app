@@ -1,5 +1,8 @@
 @import "../../styleSheets/variables.scss";
 .footer {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
