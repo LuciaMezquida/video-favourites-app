@@ -4,6 +4,7 @@ import Loading from "../Loading/Loading";
 import Header from "../Header/Header";
 import Item from "../Item/Item";
 import Footer from "../Footer/Footer";
+import "./List.scss";
 class List extends React.Component {
   constructor(props) {
     super(props);
