@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ data }) => {
   return (
-    <Link className="grid-item-link" to={`/${data.id}`}>
+    <Link className="link" to={`/${data.id}`}>
       <article className="main__item">
         <img
           className="main__item--image"

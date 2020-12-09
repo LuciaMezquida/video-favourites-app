@@ -1,0 +1,9 @@
+@import "../../styleSheets/variables.scss";
+.video-container {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+}
+.player {
+  width: 70%;
+}
