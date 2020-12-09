@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Item.scss";
+import { Link } from "react-router-dom";
 
 const Item = ({ data }) => {
   return (
-    <article className="main__item">
-      <img
-        className="main__item--image"
-        src={data.thumbnail}
-        alt={data.title}
-      />
-      <p className="main__item--title">{data.title}</p>
-    </article>
+    <Link className="grid-item-link" to={`/${data.id}`}>
+      <article className="main__item">
+        <img
+          className="main__item--image"
+          src={data.thumbnail}
+          alt={data.title}
+        />
+        <p className="main__item--title">{data.title}</p>
+      </article>
+    </Link>
   );
 };
 Item.propTypes = {
