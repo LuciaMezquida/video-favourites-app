@@ -9,7 +9,7 @@ const Video = ({ title, embed }) => (
       className="player"
       type="text/html"
       width="100%"
-      height="400px"
+      height="500px"
       src={embed}
       frameBorder="0"
     />

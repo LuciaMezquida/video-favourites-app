@@ -4,6 +4,7 @@ import { getVideoDetail } from "../../api";
 import Loading from "../Loading/Loading";
 import Video from "../Video/Video";
 import { Link } from "react-router-dom";
+import "./Detail.scss";
 
 class Detail extends Component {
   constructor(props) {
@@ -31,13 +32,13 @@ class Detail extends Component {
 
     return (
       <>
-        <div className="detail-container">
+        <div className="detail">
           <Video title={video.title} embed={video.embed} />
-          <div className="detail-summary">
-            <h2 className="detail-title">{video.title}</h2>
-            <p>{video.description}</p>
+          <div className="detail__summary">
+            <h2 className="detail__title">{video.title}</h2>
+            <p className="detail__description">{video.description}</p>
             <Link className="link" to="/">
-              <button className="detail-button">Volver</button>
+              <button className="detail__button">Volver</button>
             </Link>
           </div>
         </div>
