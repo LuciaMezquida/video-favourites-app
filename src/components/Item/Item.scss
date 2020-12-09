@@ -1,12 +1,19 @@
 @import "../../styleSheets/variables.scss";
 .main {
   &__item {
-    width: 400px;
-    &--image {
-      padding: 10px;
+    width: 300px;
+    @media all and(min-width: 768px) {
       width: 400px;
     }
+    &--image {
+      padding: 10px;
+      width: 300px;
+      @media all and(min-width: 768px) {
+        width: 400px;
+      }
+    }
     &--title {
+      padding-left: 10px;
       font-family: $font-main;
     }
   }

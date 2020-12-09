@@ -5,11 +5,21 @@
   justify-content: center;
   align-items: center;
   background-color: $color-primary;
+  @media all and(min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 0 20px;
+  }
   &__title {
     font-family: $font-main;
     margin-top: 10px;
-    font-size: 3rem;
+    font-size: 2rem;
     color: $color-secondary;
+    @media all and(min-width: 768px) {
+      margin-top: 0;
+      font-size: 2.8rem;
+    }
   }
   &__button {
     font-family: $font-main;
@@ -17,9 +27,20 @@
     height: 30px;
     font-size: 1.2rem;
     border: none;
-    background-color: $color-secondary;
+    background-color: $color-primary;
+    border: 2px solid $color-secondary;
+    color: $color-secondary;
     border-radius: 20px;
     margin: 10px 0;
     font-weight: 600;
+    outline: none;
+    transition: 0.7s ease;
+    &:hover {
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
   }
 }

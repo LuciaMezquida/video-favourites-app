@@ -5,46 +5,39 @@ import Header from "../Header/Header";
 import Item from "../Item/Item";
 import Footer from "../Footer/Footer";
 import "./List.scss";
+import { getVideos } from "../../api";
 class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoading: false,
       videos: null,
+      error: null,
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setState({ isLoading: true });
-    //Emulación de llamada a API externa
-    setTimeout(() => {
-      this.setState({
-        isLoading: false,
-        videos: [
-          {
-            id: 0,
-            title:
-              "¿Qué es CodelyTV? 🍄🔝 - Formación para programadores y divulgación del mundo del desarrollo",
-            url: "https://www.youtube.com/watch?v=rpMQd2DazTc",
-            thumbnail:
-              "https://img.youtube.com/vi/rpMQd2DazTc/maxresdefault.jpg",
-          },
-          {
-            id: 1,
-            title:
-              "Introducción a PHP: Cómo configurar tu entorno de desarrollo 🐘",
-            url: "https://www.youtube.com/embed/watch?v=v2IjMrpZog4",
-            thumbnail:
-              "https://img.youtube.com/vi/v2IjMrpZog4/maxresdefault.jpg",
-          },
-        ],
-      });
-    }, 2000);
+
+    // Promises example
+    // getVideos()
+    //   .then(data => this.setState({ videos: data, isLoading: false }))
+    //   .catch(error => this.setState({ error, isLoading: false }));
+
+    try {
+      const videos = await getVideos();
+      this.setState({ videos: videos, isLoading: false });
+    } catch (error) {
+      this.setState({ error: error, isLoading: false });
+    }
   }
   render() {
-    const { isLoading, videos } = this.state;
+    const { isLoading, videos, error } = this.state;
     if (isLoading) {
       return <Loading message="Loading..." />;
+    }
+    if (error) {
+      return <p className="error">{error.message}</p>;
     }
     return (
       <>

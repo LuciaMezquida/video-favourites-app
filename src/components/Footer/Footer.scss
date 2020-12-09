@@ -1,6 +1,6 @@
 @import "../../styleSheets/variables.scss";
 .footer {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   bottom: 0;
   display: flex;
@@ -9,6 +9,7 @@
   align-items: center;
   background-color: $color-primary;
   height: 4vh;
+
   &__text {
     color: $color-secondary;
     font-family: $font-main;
