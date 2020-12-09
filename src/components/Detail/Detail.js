@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import { getVideoDetail } from "../../api";
 import Loading from "../Loading/Loading";
 import Video from "../Video/Video";
+import { Link } from "react-router-dom";
 
 class Detail extends Component {
   constructor(props) {
@@ -35,6 +36,9 @@ class Detail extends Component {
           <div className="detail-summary">
             <h2 className="detail-title">{video.title}</h2>
             <p>{video.description}</p>
+            <Link className="link" to="/">
+              <button className="detail-button">Volver</button>
+            </Link>
           </div>
         </div>
       </>
