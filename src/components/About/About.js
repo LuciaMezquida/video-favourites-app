@@ -1,4 +1,5 @@
 import "./About.scss";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -20,6 +21,9 @@ const About = () => {
         <b>creatividad</b>, <b>resolución de problemas</b> y la{" "}
         <b>mejora contínua</b>.
       </p>
+      <Link className="link" to="/" title="Página de incio">
+        <button className="about__button">Volver</button>
+      </Link>
     </article>
   );
 };

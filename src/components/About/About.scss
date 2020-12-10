@@ -29,4 +29,23 @@
   &__text1 {
     text-align: center;
   }
+  &__button {
+    margin: 0 5%;
+    width: 90px;
+    height: 40px;
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-secondary;
+    background-color: $color-primary;
+    border: 3px solid $color-primary;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    outline: none;
+    margin-bottom: 10px;
+    &:hover {
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
+  }
 }

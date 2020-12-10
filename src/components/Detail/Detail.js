@@ -38,7 +38,7 @@ class Detail extends Component {
         <Loading
           message={`Cargando ${
             this.props.match.params.id === "about" ? "about" : "video"
-          } (#${this.props.match.params.id}) ..."
+          } (#${this.props.match.params.id}) ...
           `}
         />
       );
