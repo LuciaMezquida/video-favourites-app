@@ -81,7 +81,7 @@ export const getVideoDetail = ({ idVideo }) =>
         (el) => parseInt(el.id) === parseInt(idVideo)
       );
       // Something goes wrong
-      if (!video) return reject({ message: "No se ha encontrado el video ;(" });
+      if (!video) return reject({ message: "No se ha encontrado el video 😬" });
       // All is ok
       if (video.description) return resolve(video);
       //In case video don't have text description

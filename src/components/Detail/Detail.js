@@ -11,6 +11,7 @@ class Detail extends Component {
     super(props);
     this.state = {
       isLoading: false,
+      error: null,
     };
   }
   componentDidMount() {
@@ -22,11 +23,23 @@ class Detail extends Component {
   }
   render() {
     const { isLoading, error, video } = this.state;
-    if (error) return <p className="error">{error.message}</p>;
+    if (error)
+      return (
+        <p
+          className={`error ${
+            this.props.match.params.id == "about" ? "hidden" : ""
+          }`}
+        >
+          {error.message}
+        </p>
+      );
     if (isLoading || !video)
       return (
         <Loading
-          message={`Cargando video (#${this.props.match.params.id}) .... `}
+          message={`Cargando ${
+            this.props.match.params.id === "about" ? "about" : "video"
+          } (#${this.props.match.params.id}) ..."
+          `}
         />
       );
 

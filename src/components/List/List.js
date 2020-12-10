@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Header from "../Header/Header";
 import Item from "../Item/Item";
@@ -55,5 +54,4 @@ class List extends React.Component {
     );
   }
 }
-List.propTypes = {};
 export default List;
