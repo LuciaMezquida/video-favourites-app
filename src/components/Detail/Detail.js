@@ -17,7 +17,7 @@ class Detail extends Component {
   componentDidMount() {
     const { match } = this.props;
     this.setState({ isLoading: true });
-    getVideoDetail({ idVideo: this.props.match.params.id })
+    getVideoDetail({ idVideo: match.params.id })
       .then((data) => this.setState({ video: data, isLoading: false }))
       .catch((err) => this.setState({ error: err, isLoading: false }));
   }
@@ -28,7 +28,7 @@ class Detail extends Component {
         <div className="error-container">
           <p
             className={`error ${
-              this.props.match.params.id == "about" ? "hidden" : ""
+              this.props.match.params.id === "about" ? "hidden" : ""
             }`}
           >
             {error.message}
@@ -36,7 +36,7 @@ class Detail extends Component {
           <Link className="link" to="/">
             <button
               className={`button ${
-                this.props.match.params.id == "about" ? "hidden" : ""
+                this.props.match.params.id === "about" ? "hidden" : ""
               }`}
               title="Página de inicio"
             >

@@ -5,7 +5,8 @@ import Item from "../Item/Item";
 import Footer from "../Footer/Footer";
 import "./List.scss";
 import { getVideos } from "../../api";
-class List extends React.Component {
+
+class List extends Component {
   constructor(props) {
     super(props);
     this.state = {

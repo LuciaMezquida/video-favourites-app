@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Item.scss";
 import { Link } from "react-router-dom";
