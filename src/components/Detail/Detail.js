@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import { getVideoDetail } from "../../api";
 import Loading from "../Loading/Loading";
 import Video from "../Video/Video";
+import Error from "../Error/Error";
 import { Link } from "react-router-dom";
 import "./Detail.scss";
 
@@ -24,15 +25,7 @@ class Detail extends Component {
   render() {
     const { isLoading, error, video } = this.state;
     if (error)
-      return (
-        <p
-          className={`error ${
-            this.props.match.params.id == "about" ? "hidden" : ""
-          }`}
-        >
-          {error.message}
-        </p>
-      );
+      return <Error about={this.props.match.params.id} error={error.message} />;
     if (isLoading || !video)
       return (
         <Loading

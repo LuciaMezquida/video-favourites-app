@@ -33,16 +33,3 @@
     }
   }
 }
-.hidden {
-  display: none;
-}
-.error {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $font-main;
-  font-size: 22px;
-  font-weight: 700;
-  color: $color-primary;
-}

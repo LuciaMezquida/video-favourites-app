@@ -1,0 +1,41 @@
+@import "../../styleSheets/variables.scss";
+.error-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+.error {
+  font-family: $font-main;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $color-primary;
+  @media all and(min-width: 768px) {
+    font-size: 1.9rem;
+  }
+  @media all and(min-width: 1024px) {
+    font-size: 2.7rem;
+  }
+}
+.button {
+  width: 90px;
+  height: 40px;
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-secondary;
+  background-color: $color-primary;
+  border: 3px solid $color-primary;
+  border-radius: 20px;
+  transition: 0.5s ease;
+  outline: none;
+  margin-top: 10px;
+  &:hover {
+    color: $color-primary;
+    background-color: $color-secondary;
+  }
+}
