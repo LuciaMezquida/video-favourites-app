@@ -1,8 +1,10 @@
 @import "../../styleSheets/variables.scss";
 .loading {
   height: 100vh;
-  transform: translate(48%, 48%);
   font-family: $font-main;
   font-size: 20px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

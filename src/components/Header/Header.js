@@ -1,12 +1,23 @@
-import PropTypes from "prop-types";
 import "./Header.scss";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header className="header">
       <h1 className="header__title">Mis vídeos favoritos</h1>
-      <input type="button" value="Añadir Video" className="header__button" />
+      <div className="header__container">
+        <input
+          title="Añadir nuevo vídeo"
+          type="button"
+          value="Añadir Video"
+          className="header__button"
+        />
+        <Link className="link" to="/about" title="Sobre esta web">
+          <p className="header__about">About</p>
+        </Link>
+      </div>
     </header>
   );
 };
-Header.propTypes = {};
+
 export default Header;

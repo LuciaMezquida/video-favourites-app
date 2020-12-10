@@ -43,4 +43,17 @@
       transform: scale(0.9);
     }
   }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__about {
+    font-family: $font-main;
+    color: $color-secondary;
+    font-weight: 600;
+    padding-left: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

@@ -37,7 +37,7 @@ class Detail extends Component {
           <div className="detail__summary">
             <h2 className="detail__title">{video.title}</h2>
             <p className="detail__description">{video.description}</p>
-            <Link className="link" to="/">
+            <Link className="link" to="/" title="Página de inicio">
               <button className="detail__button">Volver</button>
             </Link>
           </div>
