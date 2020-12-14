@@ -16,7 +16,7 @@
     font-family: $font-main;
     display: relative;
     z-index: 2;
-    min-width: 50vw;
+    min-width: 80vw;
     max-width: 90vw;
     min-height: 30vh;
     max-width: 80vh;
@@ -50,10 +50,11 @@
       align-items: center;
       top: -32px;
       left: -35px;
-      font-size: 1.2rem;
-      padding-bottom: 5px;
+      font-size: 1.6rem;
+      padding-bottom: 3px;
       cursor: pointer;
       @media all and(min-width: 768px) {
+        padding-bottom: 5px;
         font-size: 2.2rem;
         width: 40px;
         height: 40px;
@@ -62,6 +63,97 @@
       }
     }
   }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &--label {
+      font-size: 0.7rem;
+      padding-top: 10px;
+      font-weight: 700;
+      @media all and(min-width: 768px) {
+        font-size: 1rem;
+      }
+      @media all and(min-width: 1024px) {
+        font-size: 1.3rem;
+      }
+    }
+    &--input {
+      outline: none;
+      font-family: $font-main;
+      font-size: 0.7rem;
+      padding-left: 7px;
+      height: 20px;
+      border-radius: 20px;
+      border: 1px solid $color-primary;
+      @media all and(min-width: 768px) {
+        font-size: 1rem;
+        height: 30px;
+      }
+      @media all and(min-width: 1024px) {
+        font-size: 1.1rem;
+        height: 35px;
+      }
+    }
+    &--textarea {
+      height: 15vh;
+      outline: none;
+      font-family: $font-main;
+      font-size: 0.7rem;
+      padding: 2px 0 0 7px;
+      border-radius: 20px;
+      border: 1px solid $color-primary;
+      @media all and(min-width: 768px) {
+        font-size: 1rem;
+      }
+      @media all and(min-width: 1024px) {
+        font-size: 1.1rem;
+      }
+    }
+    &--submit {
+      width: 80px;
+      height: 25px;
+      font-family: $font-main;
+      font-size: 15px;
+      font-weight: 700;
+      color: $color-secondary;
+      background-color: $color-primary;
+      border: 3px solid $color-primary;
+      border-radius: 20px;
+      transition: 0.5s ease;
+      outline: none;
+      margin-top: 10px;
+      &:hover {
+        color: $color-primary;
+        background-color: $color-secondary;
+      }
+      @media all and(min-width: 768px) {
+        width: 90px;
+        height: 40px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.warning,
+.success {
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 5px;
+  max-width: 70vw;
+  @media all and(min-width: 768px) {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  @media all and(min-width: 1024px) {
+    font-size: 1.3rem;
+  }
+}
+.warning {
+  background-color: #fc050591;
+}
+.success {
+  background-color: #16be168c;
 }
 @keyframes appear {
   0% {

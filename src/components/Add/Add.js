@@ -77,40 +77,47 @@ class Add extends Component {
           <h2 className="modal__container--title"> Crear nuevo Vídeo </h2>
           {showSending && <span className="success"> Enviando .... </span>}
           {hasError && (
-            <div className="error">
+            <div className="warning">
               {" "}
               Algunos campos están vacíos o contienen datos erróneos.{" "}
             </div>
           )}
-          <form>
-            <label>Título</label>
+          <form className="modal__form">
+            <label className="modal__form--label">Título</label>
             <input
+              className="modal__form--input"
               type="text"
               value={title}
               onChange={this.handleChange("title")}
+              placeholder="Ej: Grid vs Flex"
               minLength="3"
               maxLength="200"
               required
             />
-            <label>Url</label>
+            <label className="modal__form--label">Url</label>
             <input
+              className="modal__form--input"
               type="text"
               value={url}
               onChange={this.handleChange("url")}
+              placeholder="Ej: https://www.youtube.com/watch?v=5ATR5FKPb_U&feature=youtu.be"
               minLength="3"
               maxLength="200"
               required
             />
-            <label>Descripción</label>
+            <label className="modal__form--label">Descripción</label>
             <textarea
+              className="modal__form--textarea"
               value={description}
               onChange={this.handleChange("description")}
+              placeholder="Ej: Descripción del video"
               required
             />
             <input
+              className="modal__form--submit"
               type="submit"
               onClick={this.handleSubmit}
-              value="Submit"
+              value="Crear"
               disabled={showSending}
             />
             {/*deshabilita el botón una vez se ha enviado el form*/}
