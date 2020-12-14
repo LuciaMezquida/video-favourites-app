@@ -13,12 +13,11 @@ class Add extends Component {
             className="modal__container--close"
             onClick={handleCloseAdd(false)}
           >
-            {" "}
             {/*pasamos false para evitar que la página se refresque*/}
             &times;
           </span>
           <h2 className="modal__container--title"> Crear nuevo Vídeo </h2>
-          AQUÍ VA NUESTRO EL FORMULARIO
+          AQUÍ VA NUESTRO FORMULARIO
         </div>
       </section>
     );
