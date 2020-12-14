@@ -1,26 +1,30 @@
 import "./Add.scss";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { addVideo } from "../../api";
+
 class Add extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    const { onClose } = this.props;
+    const { handleCloseAdd } = this.props;
     return (
-      <div className="modal">
-        <div className="modal-content">
-          <span className="close" onClick={onClose(false)}>
+      <section className="modal">
+        <div className="modal__container">
+          <span
+            className="modal__container--close"
+            onClick={handleCloseAdd(false)}
+          >
+            {" "}
+            {/*pasamos false para evitar que la página se refresque*/}
             &times;
           </span>
-          <h2> Crear nuevo Vídeo </h2>
+          <h2 className="modal__container--title"> Crear nuevo Vídeo </h2>
           AQUÍ VA NUESTRO EL FORMULARIO
         </div>
-      </div>
+      </section>
     );
   }
 }
 Add.propTypes = {
-  onClose: PropTypes.func.isRequired,
+  handleCloseAdd: PropTypes.func.isRequired,
 };
 export default Add;
