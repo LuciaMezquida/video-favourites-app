@@ -1,3 +1,4 @@
+import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -30,4 +31,4 @@ Header.propTypes = {
   onClickAdd: PropTypes.func.isRequired,
 };
 
-export default Header;
+export default React.memo(Header);

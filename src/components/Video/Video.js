@@ -17,7 +17,7 @@ const Video = ({ title, embed }) => (
 );
 
 Video.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   embed: PropTypes.string.isRequired,
 };
 

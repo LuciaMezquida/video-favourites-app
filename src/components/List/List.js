@@ -23,7 +23,6 @@ class List extends Component {
 
   handleAdd(ev) {
     this.setState({ showAdd: true });
-    console.log(this.state.showAdd);
   }
   handleCloseAdd(reload) {
     return () => {
